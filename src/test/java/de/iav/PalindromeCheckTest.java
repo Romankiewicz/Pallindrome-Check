@@ -25,4 +25,23 @@ class PalindromeCheckTest {
         assertTrue(isPalindrome);
     }
 
+    @Test
+    void checkPalindrome_whenFirstAndLastLetterEquals_thenReturnTrue() {
+        //given
+        String stringToCheck = "AA";
+        //when
+        boolean isPalindrome = PalindromeCheck.isPalindrome(stringToCheck);
+        //then
+        assertTrue(isPalindrome);
+    }
+
+    @Test
+    void checkPalindrome_whenFirstAndLastLetterAreOdd_thenReturnFalse() {
+        //given
+        String stringToCheck = "AB";
+        //when
+        boolean isPalindrome = PalindromeCheck.isPalindrome(stringToCheck);
+        //then
+        assertFalse(isPalindrome);
+    }
 }

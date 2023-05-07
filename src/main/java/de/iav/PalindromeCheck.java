@@ -2,14 +2,7 @@ package de.iav;
 
 public class PalindromeCheck {
     public static boolean isPalindrome(String stringToCheck) {
-/*        if (stringToCheck.matches(" ")) {
-            return true;
-        }else if (stringToCheck.matches("")){
-            return true;
-        }else {
-            return false;
-        }
-    }*/
+
         if (stringToCheck == " ") {
             return true;
         }
@@ -18,6 +11,14 @@ public class PalindromeCheck {
             if ((Character.isLetter(stringToCheck.charAt(i)) == true)) {
                 return true;
             }
+        }
+        char[] firstLetter;
+        char[] lastLetter;
+
+        firstLetter = new char[]{stringToCheck.charAt(0)};
+        lastLetter = new char[]{stringToCheck.charAt(stringLength)};
+        if(firstLetter == lastLetter) {
+            return true;
         }
         return false;
     }
